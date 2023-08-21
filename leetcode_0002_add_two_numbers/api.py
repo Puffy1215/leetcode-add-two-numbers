@@ -9,13 +9,13 @@ class ListNode:
         self.next = next
 
 
-def _check_preconditions(...) -> bool:
+def _check_preconditions(l1: ListNode, l2: ListNode) -> bool:
     pass
 
 
-def add_two_numbers(...) -> ...:
+def add_two_numbers(l1: ListNode, l2: ListNode) -> ListNode:
     """Solves problem Add Two Numbers"""
 
-    assert _check_preconditions(...)
+    assert _check_preconditions(l1, l2)
 
     pass
