@@ -4,7 +4,7 @@
 class ListNode:
     """Definition for singly-linked list"""
 
-    def __init__(self, val=0, next=None):
+    def __init__(self, val=0, next=None):  # pylint: disable=redefined-builtin
         self.val = val
         self.next = next
 
