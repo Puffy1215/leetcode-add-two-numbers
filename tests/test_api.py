@@ -13,7 +13,7 @@ from leetcode_0002_add_two_numbers import api
     ),
 )
 def test_add_two_numbers(
-    result: api.ListNode, l1: api.ListNode, l2: api.ListNode
+    result: api.ListNode | None, l1: api.ListNode | None, l2: api.ListNode | None
 ) -> None:
     """Tests solution for problem Add Two Numbers"""
 

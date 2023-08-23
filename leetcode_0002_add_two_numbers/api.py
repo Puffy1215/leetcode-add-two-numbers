@@ -31,11 +31,11 @@ class ListNode:
         self.next = next
 
 
-def _check_preconditions(l1: ListNode, l2: ListNode) -> bool:
+def _check_preconditions(l1: ListNode | None, l2: ListNode | None) -> bool:
     pass
 
 
-def add_two_numbers(l1: ListNode, l2: ListNode) -> ListNode:
+def add_two_numbers(l1: ListNode | None, l2: ListNode | None) -> ListNode | None:
     """Solves problem Add Two Numbers"""
 
     assert _check_preconditions(l1, l2)
