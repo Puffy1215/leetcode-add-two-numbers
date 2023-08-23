@@ -14,7 +14,10 @@ class ListNode:
             return None
 
         nodes = [ListNode(val) for val in l]
-        for this, next in zip(nodes[:-1], nodes[1:]):
+        for this, next in zip(  # pylint: disable=redefined-builtin
+            nodes[:-1],
+            nodes[1:],
+        ):
             this.next = next
 
         return nodes[0]
