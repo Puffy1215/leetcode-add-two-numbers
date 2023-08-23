@@ -1,10 +1,16 @@
 """API for solving problem Add Two Numbers"""
 
+from typing import Optional
+
 
 class ListNode:
     """Definition for singly-linked list"""
 
-    def __init__(self, val=0, next=None):  # pylint: disable=redefined-builtin
+    def __init__(
+        self,
+        val: int = 0,
+        next: Optional["ListNode"] = None,  # pylint: disable=redefined-builtin
+    ):
         self.val = val
         self.next = next
 
