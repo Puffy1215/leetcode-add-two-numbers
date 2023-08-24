@@ -30,6 +30,21 @@ class ListNode:
         self.val = val
         self.next = next
 
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, ListNode):
+            return NotImplemented
+
+        if self.val != other.val:
+            return False
+
+        if not self.next and not other.next:
+            return True
+
+        if not self.next or not other.next:
+            return False
+
+        return self.next == other.next
+
 
 def _check_preconditions(l1: ListNode | None, l2: ListNode | None) -> bool:
     pass
