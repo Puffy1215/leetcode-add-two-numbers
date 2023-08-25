@@ -74,6 +74,10 @@ def _check_vals(l: ListNode | None) -> bool:
     return True
 
 
+def _check_leading_zeros(l: ListNode) -> bool:
+    return not (l.next and l.val == 0)
+
+
 def _check_preconditions(l1: ListNode | None, l2: ListNode | None) -> bool:
     pass
 
