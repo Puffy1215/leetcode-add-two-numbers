@@ -30,6 +30,12 @@ class ListNode:
         self.val = val
         self.next = next
 
+    def __len__(self) -> int:
+        if self.next:
+            return 1 + len(self.next)
+
+        return 1
+
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, ListNode):
             return NotImplemented
