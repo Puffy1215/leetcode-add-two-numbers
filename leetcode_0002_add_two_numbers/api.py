@@ -60,6 +60,20 @@ def _check_length(l: ListNode) -> bool:
     return LEN_MIN <= len(l) <= LEN_MAX
 
 
+VAL_MIN = 0
+VAL_MAX = 9
+
+
+def _check_vals(l: ListNode) -> bool:
+    while l:
+        if not VAL_MIN <= l.val <= VAL_MAX:
+            return False
+
+        l = l.next
+
+    return True
+
+
 def _check_preconditions(l1: ListNode | None, l2: ListNode | None) -> bool:
     pass
 
