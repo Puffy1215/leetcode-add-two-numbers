@@ -52,6 +52,14 @@ class ListNode:
         return self.next == other.next
 
 
+LEN_MIN = 1
+LEN_MAX = 100
+
+
+def _check_length(l: ListNode) -> bool:
+    return LEN_MIN <= len(l) <= LEN_MAX
+
+
 def _check_preconditions(l1: ListNode | None, l2: ListNode | None) -> bool:
     pass
 
