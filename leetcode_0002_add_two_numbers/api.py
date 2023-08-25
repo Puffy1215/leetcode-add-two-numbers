@@ -64,7 +64,7 @@ VAL_MIN = 0
 VAL_MAX = 9
 
 
-def _check_vals(l: ListNode) -> bool:
+def _check_vals(l: ListNode | None) -> bool:
     while l:
         if not VAL_MIN <= l.val <= VAL_MAX:
             return False
