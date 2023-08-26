@@ -94,6 +94,12 @@ def _check_preconditions(l: ListNode) -> bool:
 def add_two_numbers(l1: ListNode | None, l2: ListNode | None) -> ListNode | None:
     """Solves problem Add Two Numbers"""
 
-    assert _check_preconditions(l1, l2)
+    if not l1:
+        return l2
+    if not l2:
+        return l1
+
+    for l in [l1, l2]:
+        assert _check_preconditions(l)
 
     pass
