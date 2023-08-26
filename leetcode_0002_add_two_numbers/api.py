@@ -78,8 +78,17 @@ def _check_leading_zeros(l: ListNode) -> bool:
     return not (l.next and l.val == 0)
 
 
-def _check_preconditions(l1: ListNode | None, l2: ListNode | None) -> bool:
-    pass
+def _check_preconditions(l: ListNode) -> bool:
+    if not _check_length(l):
+        return False
+
+    if not _check_vals(l):
+        return False
+
+    if not _check_leading_zeros(l):
+        return False
+
+    return True
 
 
 def add_two_numbers(l1: ListNode | None, l2: ListNode | None) -> ListNode | None:
