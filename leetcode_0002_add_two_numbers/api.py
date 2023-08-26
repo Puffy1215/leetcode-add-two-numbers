@@ -94,18 +94,18 @@ def _check_preconditions(l: ListNode) -> bool:
 def _recursive_add_two_numbers(
     l1: ListNode | None, l2: ListNode | None
 ) -> ListNode | None:
+    if not l1:
+        return l2
+    if not l2:
+        return l1
     pass
 
 
 def add_two_numbers(l1: ListNode | None, l2: ListNode | None) -> ListNode | None:
     """Solves problem Add Two Numbers"""
 
-    if not l1:
-        return l2
-    if not l2:
-        return l1
-
     for l in [l1, l2]:
-        assert _check_preconditions(l)
+        if l:
+            assert _check_preconditions(l)
 
-    pass
+    return _recursive_add_two_numbers(l1, l2)
