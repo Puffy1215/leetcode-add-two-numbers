@@ -94,10 +94,11 @@ def _check_preconditions(l: ListNode) -> bool:
 def _recursive_add_two_numbers(
     l1: ListNode | None, l2: ListNode | None, x: int
 ) -> ListNode | None:
-    if not l1:
-        return l2
-    if not l2:
-        return l1
+    if not x:
+        if not l1:
+            return l2
+        if not l2:
+            return l1
 
     val = sum([l.val for l in [l1, l2] if l] + [x])
 
