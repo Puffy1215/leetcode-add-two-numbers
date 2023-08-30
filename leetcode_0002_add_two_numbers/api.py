@@ -103,7 +103,7 @@ def _recursive_add_two_numbers(
     val = sum([l.val for l in [l1, l2] if l] + [x])
 
     if l1 or l2 or val > 9:
-        next = _recursive_add_two_numbers(
+        next = _recursive_add_two_numbers(  # pylint: disable=redefined-builtin
             l1.next if l1 else l1, l2.next if l2 else l2, val // 10
         )
     else:
