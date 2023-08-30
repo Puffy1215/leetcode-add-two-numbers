@@ -99,6 +99,17 @@ def _recursive_add_two_numbers(
     if not l2:
         return l1
 
+    val = sum([l.val for l in [l1, l2] if l] + [x])
+
+    if val > 9:
+        next = _recursive_add_two_numbers(
+            l1.next if l1 else l1, l2.next if l2 else l2, val // 10
+        )
+    else:
+        next = None
+
+    return ListNode(val % 10, next)
+
 
 def add_two_numbers(l1: ListNode | None, l2: ListNode | None) -> ListNode | None:
     """Solves problem Add Two Numbers"""
@@ -107,4 +118,4 @@ def add_two_numbers(l1: ListNode | None, l2: ListNode | None) -> ListNode | None
         if l:
             assert _check_preconditions(l)
 
-    return _recursive_add_two_numbers(l1, l2)
+    return _recursive_add_two_numbers(l1, l2, 0)
